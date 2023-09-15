@@ -1,10 +1,4 @@
-﻿namespace MainMenu;
-
-class Program
-{
-    static void Main(string[] args)
-    {
-        namespace MainMenu;
+namespace MainMenu;
 
 class Program
 {
@@ -166,8 +160,4 @@ class Program
     }
 }
 
-
-
-    }
-}
 
