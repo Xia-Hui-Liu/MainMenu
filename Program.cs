@@ -1,14 +1,16 @@
 namespace MainMenu;
-
+// define a class named "Program"
 class Program
 {
     static void Main(string[] args)
     {
+        // using while loop to display the menu and handle user's input
         while (true)
         {
+            // Clear the console screen
             Console.Clear();
             Console.WriteLine("Hi, Welcome! You have come to the Main Menu!\n");
-
+            // Display menu options
             Console.WriteLine("1. Check Price");
             Console.WriteLine("2. Buy Tickets");
             Console.WriteLine("3. Repeat Review");
@@ -16,24 +18,24 @@ class Program
             Console.WriteLine("0. Exit");
 
             Console.WriteLine("Enter your choice: ");
-
+            // Try to parse user's input into an integer
             if (int.TryParse(Console.ReadLine(), out int choice))
-            {
+            {  // Switch statement to determine the action based on user's choice
                 switch (choice)
                 {
                     case 0:
-                        return;
+                        return;// Exit the loop and terminate the program
                     case 1:
-                        CheckPrice();
+                        CheckPrice();// Call the CheckPrice() method
                         break;
                     case 2:
-                        BuyTickets();
+                        BuyTickets();// Call the BuyTickets() method
                         break;
                     case 3:
-                        MovieReview();
+                        MovieReview();// Call the MovieReview() method
                         break;
                     case 4:
-                        ThirdWord();
+                        ThirdWord();// Call the ThirdWord() method
                         break;
 
                     default:
@@ -49,7 +51,7 @@ class Program
             Console.ReadKey();
         }
     }
-
+    // Method to check the ticket price based on user's age
     static void CheckPrice()
     {
         Console.WriteLine("How old are you? ");
@@ -73,10 +75,10 @@ class Program
             }
         }
     }
-
+    // Method to buy tickets based on different age group
     static void BuyTickets()
     {
-        Console.WriteLine("Choose your tickets:\n");
+        Console.WriteLine("Choose your tickets group:\n");
         Console.WriteLine("1. minor price: 80");
         Console.WriteLine("2. pensioner price: 90");
         Console.WriteLine("3. standard price: 120");
@@ -116,7 +118,7 @@ class Program
         }
 
     }
-
+    // Method to catch user input and repeat 10 times
     static void MovieReview()
     {
         Console.WriteLine("How do you like the movie?");
@@ -133,7 +135,7 @@ class Program
             }
         }
     }
-
+    // Method to extract and display the third word from a sentence
     static void ThirdWord()
     {
         Console.WriteLine("Enter a sentence:");
